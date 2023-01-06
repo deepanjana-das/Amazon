@@ -1,0 +1,47 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-01-06T07:12:44.943Z",
+        "line": 11,
+        "name": "Ordering an item in Amazon",
+        "description": "",
+        "id": "amazon-shopping-feature;ordering-an-item-in-amazon;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5476861700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Amazon landing page on hitting \"https://www.amazon.in/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.amazon.in/",
+                  "offset": 43
+                }
+              ],
+              "location": "StepDef.Steps.AmazonLandingStep(java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeSuite"
+          }
+        ]
+      }
+    ],
+    "name": "Amazon shopping Feature",
+    "description": "",
+    "id": "amazon-shopping-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Feature/Amazon.feature",
+    "tags": []
+  }
+]
