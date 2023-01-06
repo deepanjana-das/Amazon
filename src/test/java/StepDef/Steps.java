@@ -3,6 +3,7 @@ package StepDef;
 
 import Pages.AmazonLoginPage;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 
 public class Steps {
 	
@@ -15,18 +16,20 @@ public class Steps {
 	   amazonlogin.AmazonLanding(url);
 	}
 
-	/*
-	 * @When("^User clicks on sign in tab$") public void
-	 * user_clicks_on_sign_in_tab() throws Throwable {
-	 * 
-	 * }
-	 * 
-	 * @When("^User logs in by providing \"([^\"]*)\" and \"([^\"]*)\"$") public
-	 * void user_logs_in_by_providing_and(String arg1, String arg2) throws Throwable
-	 * {
-	 * 
-	 * }
-	 */
+	
+	  @When("^User clicks on sign in tab$") 
+	  public void AmazonSignInStep() throws Throwable {
+	  
+		  amazonlogin.AmazonSignIn();
+	  }
+	 
+	 @When("^User logs in by providing \"([^\"]*)\" and \"([^\"]*)\"$") 
+	 public void UserProvidesCredentialStep(String userName, String password) throws Throwable
+	  {
+	      amazonlogin.UserProvidesCredential(userName, password);
+	  }
+
+
 	/*
 	 * @When("^User is on Amazon Home page with \"([^\"]*)\"$") public void
 	 * user_is_on_Amazon_Home_page_with(String arg1) throws Throwable { // Write

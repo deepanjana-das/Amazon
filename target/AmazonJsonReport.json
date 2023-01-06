@@ -3,8 +3,8 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-01-06T07:12:44.943Z",
-        "line": 11,
+        "start_timestamp": "2023-01-06T08:44:46.887Z",
+        "line": 13,
         "name": "Ordering an item in Amazon",
         "description": "",
         "id": "amazon-shopping-feature;ordering-an-item-in-amazon;;2",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5476861700,
+              "duration": 2682833800,
               "status": "passed"
             },
             "line": 5,
@@ -28,6 +28,40 @@
               "location": "StepDef.Steps.AmazonLandingStep(java.lang.String)"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 891726300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User clicks on sign in tab",
+            "match": {
+              "location": "StepDef.Steps.AmazonSignInStep()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1082307000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User logs in by providing \"deepanjana.cse@gmail.com\" and \"pinki123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "deepanjana.cse@gmail.com",
+                  "offset": 27
+                },
+                {
+                  "val": "pinki123",
+                  "offset": 58
+                }
+              ],
+              "location": "StepDef.Steps.UserProvidesCredentialStep(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [

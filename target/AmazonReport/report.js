@@ -18,6 +18,14 @@ formatter.step({
   "name": "User is on Amazon landing page on hitting \"\u003camazonUrl\u003e\"",
   "keyword": "Given "
 });
+formatter.step({
+  "name": "User clicks on sign in tab",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "User logs in by providing \"\u003cuserid\u003e\" and \"\u003cpassword\u003e\"",
+  "keyword": "And "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -59,6 +67,26 @@ formatter.step({
 });
 formatter.match({
   "location": "StepDef.Steps.AmazonLandingStep(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on sign in tab",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonSignInStep()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User logs in by providing \"deepanjana.cse@gmail.com\" and \"pinki123\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDef.Steps.UserProvidesCredentialStep(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
