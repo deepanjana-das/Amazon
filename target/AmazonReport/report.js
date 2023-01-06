@@ -26,6 +26,10 @@ formatter.step({
   "name": "User logs in by providing \"\u003cuserid\u003e\" and \"\u003cpassword\u003e\"",
   "keyword": "And "
 });
+formatter.step({
+  "name": "User is on Amazon Home page with \"\u003cuserid\u003e\"",
+  "keyword": "And "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -91,4 +95,10 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.step({
+  "name": "User is on Amazon Home page with \"deepanjana.cse@gmail.com\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonHomePageValidatesUsernameStep(java.lang.String)"
 });

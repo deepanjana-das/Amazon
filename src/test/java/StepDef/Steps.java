@@ -1,6 +1,7 @@
 package StepDef;
 
 
+import Pages.AmazonHomePage;
 import Pages.AmazonLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -9,7 +10,7 @@ public class Steps {
 	
 	
 	AmazonLoginPage amazonlogin = new AmazonLoginPage();
-
+    AmazonHomePage amazonhome = new AmazonHomePage();
 	
 	@Given("^User is on Amazon landing page on hitting \"([^\"]*)\"$")
 	public void AmazonLandingStep(String url) throws Throwable {
@@ -30,27 +31,32 @@ public class Steps {
 	  }
 
 
-	/*
-	 * @When("^User is on Amazon Home page with \"([^\"]*)\"$") public void
-	 * user_is_on_Amazon_Home_page_with(String arg1) throws Throwable { // Write
-	 * code here that turns the phrase above into concrete actions throw new
-	 * PendingException(); }
-	 * 
-	 * @When("^User search by providing \"([^\"]*)\" in search bar$") public void
-	 * user_search_by_providing_in_search_bar(String arg1) throws Throwable { //
-	 * Write code here that turns the phrase above into concrete actions throw new
-	 * PendingException(); }
-	 * 
-	 * @When("^User choose specific item$") public void user_choose_specific_item()
-	 * throws Throwable { // Write code here that turns the phrase above into
-	 * concrete actions throw new PendingException(); }
-	 * 
-	 * @When("^User clicks on Add to Cart option for that item$") public void
-	 * user_clicks_on_Add_to_Cart_option_for_that_item() throws Throwable { // Write
-	 * code here that turns the phrase above into concrete actions throw new
-	 * PendingException(); }
-	 * 
-	 * @Then("^User validate that particular item with \"([^\"]*)\" quanitity in the cart$"
+	
+	  @When("^User is on Amazon Home page with \"([^\"]*)\"$") 
+	  public void AmazonHomePageValidatesUsernameStep(String user) throws Throwable { 
+		  
+		  amazonhome.AmazonHomePageValidatesUsername(user);
+		  
+	  }
+	  
+		/*
+		 * @When("^User search by providing \"([^\"]*)\" in search bar$") public void
+		 * AmazonHomePageSearchItemStep(String arg1) throws Throwable {
+		 * 
+		 * }
+		 * 
+		 * @When("^User choose specific item$") public void
+		 * AmazonHomePageChooseItemStep() throws Throwable {
+		 * 
+		 * }
+		 * 
+		 * @When("^User clicks on Add to Cart option for that item$") public void
+		 * AmazonHomePageItemAddtoCartStep() throws Throwable {
+		 * 
+		 * }
+		 */
+	  
+	/* @Then("^User validate that particular item with \"([^\"]*)\" quanitity in the cart$"
 	 * ) public void
 	 * user_validate_that_particular_item_with_quanitity_in_the_cart(String arg1)
 	 * throws Throwable { // Write code here that turns the phrase above into
