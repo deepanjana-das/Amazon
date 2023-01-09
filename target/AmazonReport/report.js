@@ -30,6 +30,18 @@ formatter.step({
   "name": "User is on Amazon Home page with \"\u003cuserid\u003e\"",
   "keyword": "And "
 });
+formatter.step({
+  "name": "User search by providing \"\u003citem-text\u003e\" in search bar",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "User choose specific item",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "User clicks on Add to Cart option for that item",
+  "keyword": "And "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -101,4 +113,38 @@ formatter.step({
 });
 formatter.match({
   "location": "StepDef.Steps.AmazonHomePageValidatesUsernameStep(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User search by providing \"saree\" in search bar",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonHomePageSearchItemStep(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User choose specific item",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonHomePageChooseItemStep()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on Add to Cart option for that item",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonHomePageItemAddtoCartStep()"
+});
+formatter.result({
+  "status": "passed"
+});
 });

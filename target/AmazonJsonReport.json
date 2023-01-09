@@ -1,0 +1,141 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-01-09T12:52:22.335Z",
+        "line": 17,
+        "name": "Ordering an item in Amazon",
+        "description": "",
+        "id": "amazon-shopping-feature;ordering-an-item-in-amazon;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9310038700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Amazon landing page on hitting \"https://www.amazon.in/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.amazon.in/",
+                  "offset": 43
+                }
+              ],
+              "location": "StepDef.Steps.AmazonLandingStep(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1773161900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User clicks on sign in tab",
+            "match": {
+              "location": "StepDef.Steps.AmazonSignInStep()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1626869500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User logs in by providing \"deepanjana.cse@gmail.com\" and \"pinki123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "deepanjana.cse@gmail.com",
+                  "offset": 27
+                },
+                {
+                  "val": "pinki123",
+                  "offset": 58
+                }
+              ],
+              "location": "StepDef.Steps.UserProvidesCredentialStep(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12094807700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on Amazon Home page with \"deepanjana.cse@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "deepanjana.cse@gmail.com",
+                  "offset": 34
+                }
+              ],
+              "location": "StepDef.Steps.AmazonHomePageValidatesUsernameStep(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5537378100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User search by providing \"saree\" in search bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "saree",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDef.Steps.AmazonHomePageSearchItemStep(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 240111400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User choose specific item",
+            "match": {
+              "location": "StepDef.Steps.AmazonHomePageChooseItemStep()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11056702300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on Add to Cart option for that item",
+            "match": {
+              "location": "StepDef.Steps.AmazonHomePageItemAddtoCartStep()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeSuite"
+          }
+        ]
+      }
+    ],
+    "name": "Amazon shopping Feature",
+    "description": "",
+    "id": "amazon-shopping-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Feature/Amazon.feature",
+    "tags": []
+  }
+]

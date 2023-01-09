@@ -27,20 +27,19 @@ public class AmazonHomePage extends CommonMethods {
 	@FindBy(xpath = "//a[@title='See All Buying Options']")
 	WebElement SeeAllbuyOption_button;
 
-	@FindBy(xpath = "(//input[@value='Add to cart'])[1]")
+	@FindBy(xpath = "//input[@value='Add to Cart']")
 	WebElement AddTocart_button;
 
-	String xgh = "//input[@id='add-to-cart-button']";
+	//String xgh = "//input[@id='add-to-cart-button']";
+	
+
 	
 	  
 	  public void AmazonHomePageValidatesUsername(String userName)
 	  { 
 		  AmazonHomePage amazonhome = PageFactory.initElements(driver, AmazonHomePage.class);
 		  String name = amazonhome.helloUser.getText().substring(7).toLowerCase();
-		  System.out.println("dwef");
-		  System.out.println("sds");
-		  
-		  if (userName.contains(name))
+ 		  if (userName.contains(name))
 		  {
 			  System.out.println("Login successful...Success");
 		  }
@@ -52,23 +51,35 @@ public class AmazonHomePage extends CommonMethods {
 		  
 		  
 	  }
-}
+ 
+  public void AmazonHomePageSearchItem(String item) 
+  {
+	  AmazonHomePage amazonhome = PageFactory.initElements(driver, AmazonHomePage.class);
+	  passingText(amazonhome.Search_Box, item);
+	  enterAction();
+	  amazonhome.scrollDown();
 	  
-/*
- * public void AmazonHomePageSearchItemStep(String arg1) {
- * 
- * }
- * 
- * 
- * public void AmazonHomePageChooseItemStep() {
- * 
- * }
- * 
- * 
- * public void AmazonHomePageItemAddtoCartStep() {
- * 
- * }
- * 
- * 
- * }
- */
+  }
+  
+  
+  public void AmazonHomePageChooseItem()
+  {
+	  AmazonHomePage amazonhome = PageFactory.initElements(driver, AmazonHomePage.class);
+	  clicking(amazonhome.item);
+	  
+  }
+  
+  
+  public void AmazonHomePageItemAddtoCart()
+  {
+	  AmazonHomePage amazonhome = PageFactory.initElements(driver, AmazonHomePage.class);
+	  window_handles();
+	  waiting(amazonhome.AddTocart_button);
+	  System.out.println("Add to Cart button is visible");
+	  clicking(amazonhome.AddTocart_button);
+  
+  }
+  
+  
+  }
+ 

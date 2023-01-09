@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -46,6 +47,12 @@ public class CommonMethods extends utility {
 			Select s1 = new Select(e);
 			s1.selectByVisibleText(text);
 			
+		}
+		
+		public void scrollDown()
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,600)");
 		}
 		
 		public void enterAction()

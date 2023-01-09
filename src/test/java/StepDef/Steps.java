@@ -39,22 +39,28 @@ public class Steps {
 		  
 	  }
 	  
-		/*
-		 * @When("^User search by providing \"([^\"]*)\" in search bar$") public void
-		 * AmazonHomePageSearchItemStep(String arg1) throws Throwable {
-		 * 
-		 * }
-		 * 
-		 * @When("^User choose specific item$") public void
-		 * AmazonHomePageChooseItemStep() throws Throwable {
-		 * 
-		 * }
-		 * 
-		 * @When("^User clicks on Add to Cart option for that item$") public void
-		 * AmazonHomePageItemAddtoCartStep() throws Throwable {
-		 * 
-		 * }
-		 */
+		
+		  @When("^User search by providing \"([^\"]*)\" in search bar$")
+		  public void AmazonHomePageSearchItemStep(String item) throws Throwable
+		  {
+		  amazonhome.AmazonHomePageSearchItem(item);
+		  }
+		  
+			
+	@When("^User choose specific item$") 
+	public void AmazonHomePageChooseItemStep() throws Throwable {
+		
+		amazonhome.AmazonHomePageChooseItem();
+			  
+	}
+			  
+	@When("^User clicks on Add to Cart option for that item$") 
+	public void AmazonHomePageItemAddtoCartStep()throws Throwable
+	{
+		amazonhome.AmazonHomePageItemAddtoCart();
+	}
+			 
+		 
 	  
 	/* @Then("^User validate that particular item with \"([^\"]*)\" quanitity in the cart$"
 	 * ) public void
