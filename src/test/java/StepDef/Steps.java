@@ -1,9 +1,11 @@
 package StepDef;
 
 
+import Pages.AmazonCartPage;
 import Pages.AmazonHomePage;
 import Pages.AmazonLoginPage;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Steps {
@@ -11,6 +13,7 @@ public class Steps {
 	
 	AmazonLoginPage amazonlogin = new AmazonLoginPage();
     AmazonHomePage amazonhome = new AmazonHomePage();
+    AmazonCartPage amazoncart = new AmazonCartPage();
 	
 	@Given("^User is on Amazon landing page on hitting \"([^\"]*)\"$")
 	public void AmazonLandingStep(String url) throws Throwable {
@@ -62,18 +65,22 @@ public class Steps {
 			 
 		 
 	  
-	/* @Then("^User validate that particular item with \"([^\"]*)\" quanitity in the cart$"
-	 * ) public void
-	 * user_validate_that_particular_item_with_quanitity_in_the_cart(String arg1)
-	 * throws Throwable { // Write code here that turns the phrase above into
-	 * concrete actions throw new PendingException(); }
-	 * 
-	 * @Then("^User click on Proceed to Buy option$") public void
-	 * user_click_on_Proceed_to_Buy_option() throws Throwable { // Write code here
-	 * that turns the phrase above into concrete actions throw new
-	 * PendingException(); }
-	 * 
-	 * @Then("^User click on Deliver to the Address$") public void
+	 @Then("^User validate that particular item with \"([^\"]*)\" quanitity in the cart$"
+	 ) 
+	 public void AmazonCartpageItemValidationIncludingQuantityInCartStep(String arg1)
+	 throws Throwable {
+		 amazoncart.AmazonCartpageItemValidationIncludingQuantityInCart(arg1);
+		 
+	 }
+	 
+		/*
+		 * @Then("^User click on Proceed to Buy option$") public void
+		 * AmazoncartpageProceedtoBuyoptionStep() throws Throwable {
+		 * 
+		 * }
+		 */
+	 
+	 /* @Then("^User click on Deliver to the Address$") public void
 	 * user_click_on_Deliver_to_the_Address() throws Throwable { // Write code here
 	 * that turns the phrase above into concrete actions throw new
 	 * PendingException(); }

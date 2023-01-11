@@ -42,6 +42,10 @@ formatter.step({
   "name": "User clicks on Add to Cart option for that item",
   "keyword": "And "
 });
+formatter.step({
+  "name": "User validate that particular item with \"\u003cquantityNumber\u003e\" quanitity in the cart",
+  "keyword": "Then "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -143,6 +147,16 @@ formatter.step({
 });
 formatter.match({
   "location": "StepDef.Steps.AmazonHomePageItemAddtoCartStep()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User validate that particular item with \"1\" quanitity in the cart",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonCartpageItemValidationIncludingQuantityInCartStep(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

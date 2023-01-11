@@ -9,6 +9,8 @@ Feature: Amazon shopping Feature
     When User search by providing "<item-text>" in search bar
     And User choose specific item
     And User clicks on Add to Cart option for that item
+    Then User validate that particular item with "<quantityNumber>" quanitity in the cart 
+    
     
 
 

@@ -3,8 +3,8 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-01-09T12:52:22.335Z",
-        "line": 17,
+        "start_timestamp": "2023-01-11T13:30:55.125Z",
+        "line": 19,
         "name": "Ordering an item in Amazon",
         "description": "",
         "id": "amazon-shopping-feature;ordering-an-item-in-amazon;;2",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9310038700,
+              "duration": 12620388300,
               "status": "passed"
             },
             "line": 5,
@@ -31,7 +31,7 @@
           },
           {
             "result": {
-              "duration": 1773161900,
+              "duration": 2779702500,
               "status": "passed"
             },
             "line": 6,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 1626869500,
+              "duration": 2155351400,
               "status": "passed"
             },
             "line": 7,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 12094807700,
+              "duration": 15309562400,
               "status": "passed"
             },
             "line": 8,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 5537378100,
+              "duration": 11501362800,
               "status": "passed"
             },
             "line": 9,
@@ -101,7 +101,7 @@
           },
           {
             "result": {
-              "duration": 240111400,
+              "duration": 338703900,
               "status": "passed"
             },
             "line": 10,
@@ -113,7 +113,7 @@
           },
           {
             "result": {
-              "duration": 11056702300,
+              "duration": 23019742100,
               "status": "passed"
             },
             "line": 11,
@@ -122,6 +122,24 @@
               "location": "StepDef.Steps.AmazonHomePageItemAddtoCartStep()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 126693400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User validate that particular item with \"1\" quanitity in the cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDef.Steps.AmazonCartpageItemValidationIncludingQuantityInCartStep(java.lang.String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
