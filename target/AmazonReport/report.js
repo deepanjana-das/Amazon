@@ -46,6 +46,10 @@ formatter.step({
   "name": "User validate that particular item with \"\u003cquantityNumber\u003e\" quanitity in the cart",
   "keyword": "Then "
 });
+formatter.step({
+  "name": "User click on Proceed to Buy option",
+  "keyword": "And "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -66,7 +70,7 @@ formatter.examples({
         "deepanjana.cse@gmail.com",
         "pinki123",
         "saree",
-        "1"
+        "3"
       ]
     }
   ]
@@ -152,11 +156,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User validate that particular item with \"1\" quanitity in the cart",
+  "name": "User validate that particular item with \"3\" quanitity in the cart",
   "keyword": "Then "
 });
 formatter.match({
   "location": "StepDef.Steps.AmazonCartpageItemValidationIncludingQuantityInCartStep(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on Proceed to Buy option",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazoncartpageProceedtoBuyoptionStep()"
 });
 formatter.result({
   "status": "passed"

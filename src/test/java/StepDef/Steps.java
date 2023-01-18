@@ -67,18 +67,19 @@ public class Steps {
 	  
 	 @Then("^User validate that particular item with \"([^\"]*)\" quanitity in the cart$"
 	 ) 
-	 public void AmazonCartpageItemValidationIncludingQuantityInCartStep(String arg1)
+	 public void AmazonCartpageItemValidationIncludingQuantityInCartStep(String itemcount)
 	 throws Throwable {
-		 amazoncart.AmazonCartpageItemValidationIncludingQuantityInCart(arg1);
+		 amazoncart.AmazonCartpageItemValidationIncludingQuantityInCart(itemcount);
 		 
 	 }
 	 
-		/*
-		 * @Then("^User click on Proceed to Buy option$") public void
-		 * AmazoncartpageProceedtoBuyoptionStep() throws Throwable {
-		 * 
-		 * }
-		 */
+		
+		  @Then("^User click on Proceed to Buy option$") public void
+		  AmazoncartpageProceedtoBuyoptionStep() throws Throwable {
+		  
+			  amazoncart.AmazoncartpageProceedtoBuyoption();
+		  }
+		 
 	 
 	 /* @Then("^User click on Deliver to the Address$") public void
 	 * user_click_on_Deliver_to_the_Address() throws Throwable { // Write code here

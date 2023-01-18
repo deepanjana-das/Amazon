@@ -28,7 +28,10 @@ public class AmazonHomePage extends CommonMethods {
 	WebElement searchIcon;
 
 	@FindBy(xpath = "(//span[@class= 'a-size-base-plus a-color-base a-text-normal'])[1]")
-	WebElement item;
+	public WebElement item;
+	
+	@FindBy(xpath = "//span[@id='productTitle']")
+	public WebElement selectedItem;
 
 	@FindBy(xpath = "//a[@title='See All Buying Options']")
 	WebElement SeeAllbuyOption_button;
@@ -41,6 +44,8 @@ public class AmazonHomePage extends CommonMethods {
 
 	@FindBy(xpath = "//span [contains(text(), 'Cart')]")
 	WebElement cart;
+	
+	public static String s;
 
 	ExtentTest testlog;
 
@@ -71,11 +76,14 @@ public class AmazonHomePage extends CommonMethods {
 		testlog.info("user scrolled down the page");
 
 	}
+	
+	
 
 	public void AmazonHomePageChooseItem() {
 		AmazonHomePage amazonhome = PageFactory.initElements(driver, AmazonHomePage.class);
 		if (amazonhome.item.isDisplayed()) {
 			testlog.log(Status.PASS, "Searched item is present in outlet");
+			//s=amazonhome.item.getText();
 			clicking(amazonhome.item);
 			testlog.info("user clicked on one saree");
 		} else {
@@ -84,6 +92,8 @@ public class AmazonHomePage extends CommonMethods {
 		}
 
 	}
+	
+	
 
 	public void AmazonHomePageItemAddtoCart() {
 		AmazonHomePage amazonhome = PageFactory.initElements(driver, AmazonHomePage.class);
@@ -91,6 +101,7 @@ public class AmazonHomePage extends CommonMethods {
 		testlog.info("another page is opened");
 		waiting(amazonhome.AddTocart_button);
 		testlog.info("Add to Cart button is visible");
+		s=amazonhome.selectedItem.getText().trim();
 		clicking(amazonhome.AddTocart_button);
 		testlog.info("user clicked on Add to Cart button");
 		if (amazonhome.addedToCart_Successful_Message.isDisplayed() == true) {

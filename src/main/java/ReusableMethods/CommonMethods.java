@@ -2,9 +2,11 @@ package ReusableMethods;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -49,10 +51,31 @@ public class CommonMethods extends utility {
 			
 		}
 		
+		public void selectItemQuantityFromBootstrapDropdown(String xpath, String text)
+		{
+			List<WebElement> l= driver.findElements(By.xpath(xpath));
+			for(WebElement e:l)
+			{
+				if(e.getText().equalsIgnoreCase(text))
+				{
+					e.click();
+					break;
+				}
+			}
+			
+		}
+		
+		
 		public void scrollDown()
 		{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,600)");
+		}
+		
+		public void scrollTolement(WebElement e)
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView(true);", e);
 		}
 		
 		public void enterAction()
@@ -86,6 +109,15 @@ public class CommonMethods extends utility {
 			
 		}
 		
+		public WebElement specificElement(String xpath)
+		{
+			return driver.findElement(By.xpath(xpath));
+		}
+		
+		public List<WebElement> getElements(String xpath)
+		{
+			return driver.findElements(By.xpath(xpath));
+		}
 
 	}
 

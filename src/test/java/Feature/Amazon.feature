@@ -10,10 +10,11 @@ Feature: Amazon shopping Feature
     And User choose specific item
     And User clicks on Add to Cart option for that item
     Then User validate that particular item with "<quantityNumber>" quanitity in the cart 
+    And User click on Proceed to Buy option
     
     
 
 
     Examples: 
       |amazonUrl|userid|password|item-text|quantityNumber|
-      |https://www.amazon.in/|deepanjana.cse@gmail.com|pinki123|saree|1|
+      |https://www.amazon.in/|deepanjana.cse@gmail.com|pinki123|saree|3|
