@@ -56,6 +56,7 @@ public class AmazonCartPage extends CommonMethods {
 
 		if (amazoncart.AddedtoCart_message.getText().contains(Cartpage)) {
 			log1.log(Status.PASS, "welcome to Cart page");
+			screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonCart\\CartPage.jpg");
 
 			if (AmazonHomePage.s.contains(itemtext)) {
 				log1.log(Status.PASS, "Selected item has been added in the cart");
@@ -63,9 +64,11 @@ public class AmazonCartPage extends CommonMethods {
 				clicking(amazoncart.quantityButton);
 				log1.info("User clicked arrow to modify quantity for the selected item");
 				Thread.sleep(1000);
+				screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonCart\\ItemCountList.jpg");
 				selectItemQuantityFromBootstrapDropdown(listOfQuantity, itemCount);
 				log1.info("User selected quantity for the selected item");
 				Thread.sleep(500);
+				screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonCart\\ItemCount.jpg");
 			} else {
 				log1.log(Status.FAIL, "Selected item was not added in the cart");
 			}
@@ -80,6 +83,8 @@ public class AmazonCartPage extends CommonMethods {
 			} else {
 				log1.info("No such pre exisiting items are there to delete.");
 			}
+			
+			screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonCart\\finalOrderedItem.jpg");
 
 		} else {
 			log1.log(Status.FAIL, "Failed to open Cart page");

@@ -95,13 +95,13 @@ public class CommonMethods extends utility {
 			}
 		}
 		
-		public void screenCapture()
+		public void screenCapture(String filePath)
 		{
 			TakesScreenshot ts=(TakesScreenshot)driver;
 			File file=ts.getScreenshotAs(OutputType.FILE);
 			try {
 				FileInputStream fileInputStream= new FileInputStream(file);
-				FileUtils.copyFile(file, new File(".//Screenshot//Result.jpg"));
+				FileUtils.copyFile(file, new File(filePath));
 			} catch (Exception e) {
 				
 				e.printStackTrace();

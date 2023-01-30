@@ -11,6 +11,8 @@ Feature: Amazon shopping Feature
     And User clicks on Add to Cart option for that item
     Then User validate that particular item with "<quantityNumber>" quanitity in the cart 
     And User click on Proceed to Buy option
+    And User click on Deliver to the Address 
+    And User now is on Payment page 
     
     
 

@@ -50,6 +50,14 @@ formatter.step({
   "name": "User click on Proceed to Buy option",
   "keyword": "And "
 });
+formatter.step({
+  "name": "User click on Deliver to the Address",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "User now is on Payment page",
+  "keyword": "And "
+});
 formatter.examples({
   "name": "",
   "description": "",
@@ -171,6 +179,26 @@ formatter.step({
 });
 formatter.match({
   "location": "StepDef.Steps.AmazoncartpageProceedtoBuyoptionStep()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on Deliver to the Address",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonAddressPageStep()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User now is on Payment page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StepDef.Steps.AmazonPaymentPageStep()"
 });
 formatter.result({
   "status": "passed"

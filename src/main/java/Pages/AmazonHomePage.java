@@ -56,7 +56,7 @@ public class AmazonHomePage extends CommonMethods {
 		String name = amazonhome.helloUser.getText().substring(7).toLowerCase();
 		if (userName.contains(name)) {
 			testlog.log(Status.PASS, "Login successful...Success");
-
+            screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonHome\\SuccessfulLogin.jpg");
 		}
 
 		else {
@@ -72,8 +72,10 @@ public class AmazonHomePage extends CommonMethods {
 		testlog.info("user searched for an item in search box");
 		enterAction();
 		testlog.info("user pressed enter");
+		screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonHome\\searchedItemOutlet.jpg");
 		amazonhome.scrollDown();
 		testlog.info("user scrolled down the page");
+		screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonHome\\searchedItemOutletScrollDown.jpg");
 
 	}
 	
@@ -102,10 +104,12 @@ public class AmazonHomePage extends CommonMethods {
 		waiting(amazonhome.AddTocart_button);
 		testlog.info("Add to Cart button is visible");
 		s=amazonhome.selectedItem.getText().trim();
+		screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonHome\\specificItemPage.jpg");
 		clicking(amazonhome.AddTocart_button);
 		testlog.info("user clicked on Add to Cart button");
 		if (amazonhome.addedToCart_Successful_Message.isDisplayed() == true) {
 			testlog.log(Status.PASS, "Searched item was added successfully to the cart");
+			screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonHome\\ItemAdded.jpg");
 		} else {
 			testlog.log(Status.FAIL, "Searched item is not added in cart");
 			Assert.assertEquals(true, false);

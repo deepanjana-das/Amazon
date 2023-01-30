@@ -50,7 +50,7 @@ public class AmazonLoginPage extends CommonMethods {
 		report.attachReporter(reporter);
 		logger=report.createTest("Login to Amazon");
 		driver.get(url);
-		logger.info("User provided the url");
+		logger.info("User provided the url as " + url);
 	}
 	
 	  public void AmazonSignIn() throws Throwable {
@@ -74,9 +74,11 @@ public class AmazonLoginPage extends CommonMethods {
 			}
 			passingText(login.UserEmail, userName);
 			logger.info("User provided username");
+			screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonLogin\\Username.jpg");
 			clicking(login.Continue_button);
 			passingText(login.Password, password);
 			logger.info("User provided password");
+			screenCapture("D:\\Deepanjana\\AutomationProjects\\Screenshots\\AmazonLogin\\Password.jpg");
 			clicking(login.Login_button);
 			logger.info("User clicked on submit button"); 
 			report.flush();
